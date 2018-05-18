@@ -1,7 +1,31 @@
+<h1>Task Manager</h1>
 <div id="content">
-	
+	<div class="table">
+		<div class="table-row">
+			<div class="table-header">Task</div>
+			<div class="table-header">Sunday</div>
+			<div class="table-header">Monday</div>
+			<div class="table-header">Tuesday</div>
+			<div class="table-header">Wednesday</div>
+			<div class="table-header">Thursday</div>
+			<div class="table-header">Friday</div>
+			<div class="table-header">Saturday</div>
+			<div class="table-header">Total</div>
+		</div>
+		<div class="weeks">
+			<% for(var key in regions){ %>
+				<div class="<%= regions[key] %>"></div>
+			<% } %>
+		</div>
+		<div class="table-row new">
+			<button class="addNewRow pointer">Add New Row</button>
+		</div>
+		<div class="table-row footer">
+			<div class="table-data"></div>
+		</div>
+	</div>
 </div>
-
+<h2>Demo!</h2>
 
 Mockup
 <div class="exmaple">

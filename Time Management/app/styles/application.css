@@ -6,6 +6,13 @@ body {
   cursor: pointer;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 .table {
   float: left;
   width: 100%;

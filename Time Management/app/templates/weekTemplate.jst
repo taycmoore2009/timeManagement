@@ -1,0 +1,18 @@
+
+<div class="table-row">
+    <div class="table-data">
+        <select class="tasks">
+            <% for(var index in availableTasks){ %>
+                <option val="<%= availableTasks[index].id %>"><%= availableTasks[index].name %></option>
+            <% } %>
+        </select>
+    </div>
+    <div class="table-data"><input type="number" value="0" class="day-hours pointer"/></div>
+    <div class="table-data"><input type="number" value="0" class="day-hours pointer"/></div>
+    <div class="table-data"><input type="number" value="0" class="day-hours pointer"/></div>
+    <div class="table-data"><input type="number" value="0" class="day-hours pointer"/></div>
+    <div class="table-data"><input type="number" value="0" class="day-hours pointer"/></div>
+    <div class="table-data"><input type="number" value="0" class="day-hours pointer"/></div>
+    <div class="table-data"><input type="number" value="0" class="day-hours pointer"/></div>
+    <div class="table-data"><%= totalHours %></div>
+</div>
