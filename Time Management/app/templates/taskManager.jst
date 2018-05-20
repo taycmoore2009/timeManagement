@@ -12,16 +12,25 @@
 			<div class="table-header">Saturday</div>
 			<div class="table-header">Total</div>
 		</div>
-		<div class="weeks">
-			<% for(var key in regions){ %>
-				<div class="<%= regions[key] %>"></div>
-			<% } %>
-		</div>
+		<% for(var key in regions){ %>
+				<div class="table-row">
+					<div class="table-data tasks-data">
+						<select class="tasks" data-week="<%= regions[key] %>">
+							<% for(var index in availableTasks){ %>
+								<option <% if(weeks.get(regions[key]).get("task") == availableTasks[index].id){ %>selected="selected"<% } %> value="<%= availableTasks[index].id %>">
+									<%= availableTasks[index].name %>
+								</option>
+							<% } %>
+						</select>
+					</div>
+					<div class="<%= regions[key] %>"></div>
+				</div>
+		<% } %>
 		<div class="table-row new">
 			<button class="addNewRow pointer">Add New Row</button>
 		</div>
 		<div class="table-row footer">
-			<div class="table-data"></div>
+			<div class="table-data">Total: <%= totalTime %></div>
 		</div>
 	</div>
 </div>

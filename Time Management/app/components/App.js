@@ -15,7 +15,20 @@ export default Marionette.Application.extend({
           {id: 4, name: "Project 4"}
         ],
         regions: ["week0"],
-        weeks: [{week: "week0", days: [], totalHours: 0}]
+        weeks: new Backbone.Collection([{
+          id: "week0",
+          days: [
+            {day: "Sunday", hours: 0, notes: ""},
+            {day: "Monday", hours: 0, notes: ""},
+            {day: "Tuesday", hours: 0, notes: ""},
+            {day: "Wednesday", hours: 0, notes: ""},
+            {day: "Thursday", hours: 0, notes: ""},
+            {day: "Friday", hours: 0, notes: ""},
+            {day: "Saturday", hours: 0, notes: ""},
+          ], 
+          totalHours: 0, 
+          task: ""
+        }])
       })
     });
 

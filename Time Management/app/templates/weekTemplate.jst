@@ -1,18 +1,12 @@
 
-<div class="table-row">
-    <div class="table-data">
-        <select class="tasks">
-            <% for(var index in availableTasks){ %>
-                <option val="<%= availableTasks[index].id %>"><%= availableTasks[index].name %></option>
-            <% } %>
-        </select>
+<% for(var index in days){ %>
+    <div class="table-data day">
+        <input type="number" value="<%= days[index].hours %>" data-day="<%= days[index].day %>" class="day-hours pointer"/>
+        <button title="Show Notes" class="showNotes"></button>
+        <div class="day-popout hide">
+            Notes<br/>
+            <textarea data-day="<%= days[index].day %>"><%= days[index].notes %></textarea>
+        </div>
     </div>
-    <div class="table-data"><input type="number" value="0" class="day-hours pointer"/></div>
-    <div class="table-data"><input type="number" value="0" class="day-hours pointer"/></div>
-    <div class="table-data"><input type="number" value="0" class="day-hours pointer"/></div>
-    <div class="table-data"><input type="number" value="0" class="day-hours pointer"/></div>
-    <div class="table-data"><input type="number" value="0" class="day-hours pointer"/></div>
-    <div class="table-data"><input type="number" value="0" class="day-hours pointer"/></div>
-    <div class="table-data"><input type="number" value="0" class="day-hours pointer"/></div>
-    <div class="table-data"><%= totalHours %></div>
-</div>
+<% } %>
+<div class="table-data total"><%= totalHours %></div>

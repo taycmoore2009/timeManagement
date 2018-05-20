@@ -51,15 +51,19 @@ button:focus {
   min-height: 20px;
   border: 1px solid #000;
   text-align: center;
+  position: relative;
 }
 
-.table-data:first-of-type {
+.table-data.tasks-data {
   width: calc(12% - 2px);
   text-align: left;
 }
 
 .table-row.footer .table-data {
-  width: 100%;
+  width: calc(100% - 20px);
+  background: #fff;
+  padding: 0 10px;
+  text-align: right;
 }
 
 .addNewRow {
@@ -77,14 +81,48 @@ select.tasks {
 }
 
 input.day-hours {
-  width: calc(100% - 10px);
+  width: calc(100% - 20px);
   height: 100%;
   border: none;
   padding: 0 5px;
+}
+
+.showNotes {
+  background: red;
+  border: 0;
+  padding: 0;
+  width: 10px;
+  height: 20px;
+  float: right;
+}
+
+.day-popout {
+  position: absolute;
+  background: #FFF;
+  z-index: 1;
+  top: 100%;
+  border: 1px solid #000;
+  padding: 5px;
+}
+
+.table-row:nth-child(2n) {
+  background: #ddd;
+}
+
+.table-row:nth-child(2n) input {
+  background: #ddd;
+}
+
+.table-row:nth-child(2n) select {
+  background: #ddd;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
+}
+
+.hide {
+  display: none;
 }
